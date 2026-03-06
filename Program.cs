@@ -60,7 +60,7 @@ app.UseCors("ReactPolicy");
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.MapGet("/", () => "API running on Render");
 
 app.MapControllers();
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
